@@ -1,0 +1,114 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 185 70% 98%;
+    --foreground: 200 50% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 200 50% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 200 50% 15%;
+
+    --primary: 185 60% 35%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 150 40% 45%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 185 30% 92%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 150 40% 90%;
+    --accent-foreground: 150 60% 20%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 185 30% 80%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 185 60% 35%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 200 50% 5%;
+    --foreground: 210 40% 98%;
+
+    --card: 200 50% 7%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 200 50% 7%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 185 60% 35%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 150 40% 40%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 200 50% 15%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 150 50% 20%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 200 50% 20%;
+    --input: 200 50% 15%;
+    --ring: 185 60% 35%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer components {
+  .hero-gradient {
+    @apply bg-gradient-to-br from-go-green-400/80 via-go-green-600/50 to-forest-700/40;
+  }
+  
+  .section-heading {
+    @apply text-3xl md:text-4xl font-bold text-go-green-800 mb-6 relative;
+  }
+  
+  .section-heading::after {
+    content: "";
+    @apply absolute bottom-0 left-0 w-20 h-1 bg-go-green-400 mt-2;
+  }
+  
+  .program-card {
+    @apply bg-white rounded-lg shadow-md transition-all duration-300 hover:shadow-xl hover:-translate-y-1 overflow-hidden;
+  }
+
+  .btn-primary {
+    @apply bg-go-green-600 hover:bg-go-green-700 text-white font-semibold py-2 px-6 rounded-md transition-colors duration-200;
+  }
+  
+  .btn-secondary {
+    @apply bg-forest-500 hover:bg-forest-600 text-white font-semibold py-2 px-6 rounded-md transition-colors duration-200;
+  }
+}
